@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Bubble from "./bubble";
 
 const nameText = "Marshall";
 const letters = Array.from(nameText);
@@ -30,7 +31,14 @@ export default function Hero() {
 
   return (
     <div className='w-full min-h-screen flex flex-col lg:flex-row items-center justify-center'>
-      <div className='z-10 mt-[90%] md:mt-[60%] lg:mt-0'>
+      <div className='z-10 px-6'>
+        <div className="relative top-10 right-10 animate-float-fast opacity-80">
+          <Bubble
+            imgURL="/Orlando.JPG"
+            description="Club tennis President"
+          />
+
+        </div>
         <h1 className='text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-Galindo tracking-wider my-8'>
           Hi! I&apos;m{" "}
           <motion.span
@@ -58,7 +66,7 @@ export default function Hero() {
           >
             <div className='absolute inset-[3px] bg-black rounded-full flex items-center justify-center gap-1 hover:invert transition duration-300'>
               <i class='bx  bx-terminal'  ></i>  Software Developer
-             
+
             </div>
           </a>
         </div>
