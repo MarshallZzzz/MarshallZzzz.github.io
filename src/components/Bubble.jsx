@@ -7,7 +7,7 @@ const Bubble = ({ imgURL, description }) => {
     const [flipped, setFlipped] = useState(false)
 
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex">
             <div
                 className="relative w-40 h-40 cursor-pointer"
                 onClick={() => setFlipped(!flipped)}

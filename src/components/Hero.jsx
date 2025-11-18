@@ -30,46 +30,58 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className='w-full min-h-screen flex flex-col lg:flex-row items-center justify-center'>
-      <div className='z-10 px-6'>
-        <div className="relative top-10 right-10 animate-float-fast opacity-80">
+    <div className='relative w-full min-h-screen flex flex-col lg:flex-rows items-center justify-center'>
+      <div className="absolute inset-0 pointer-events-none min-h-screen">
+
+        <div className="top-10 right-10 animate-float-fast opacity-80">
           <Bubble
             imgURL="/Orlando.JPG"
             description="Club tennis President"
           />
-
         </div>
-        <h1 className='text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-Galindo tracking-wider my-8'>
-          Hi! I&apos;m{" "}
-          <motion.span
-            key={replayKey}
-            className="inline-flex items-baseline"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-          >
-            {letters.map((ch, i) => (
-              <motion.span key={i} variants={letter} className="inline-block">
-                {ch}
-              </motion.span>
-            ))}
-          </motion.span>
-        </h1>
-        <div className='flex lg:flex-row sm:flex-col gap-4 justify-center'>
-          <a
-            href='#projects'
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className='relative w-[95%] sm:w-48 h-10 bg-gradient-to-r from-[#656565] to-[#06402B] shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full'
-          >
-            <div className='absolute inset-[3px] bg-black rounded-full flex items-center justify-center gap-1 hover:invert transition duration-300'>
-              <i class='bx  bx-terminal'  ></i>  Software Developer
-
-            </div>
-          </a>
+        <div className="relative bottom-10 left-10 animate-float-fast opacity-80">
+          <Bubble
+            imgURL="/MicroMouse.JPG"
+            description="Club tennis President"
+          />
         </div>
+        <div className="relative bottom-10 right-10 animate-float-fast opacity-80">
+          <Bubble
+            imgURL="/SS.JPG"
+            description="Club tennis President"
+          />
+        </div>
+      </div>
+      <h1 className='text-6xl sm:text-6xl md:text-7xl lg:text-8xl font-Galindo tracking-wider my-8'>
+        Hi! I&apos;m{" "}
+        <motion.span
+          key={replayKey}
+          className="inline-flex items-baseline"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {letters.map((ch, i) => (
+            <motion.span key={i} variants={letter} className="inline-block">
+              {ch}
+            </motion.span>
+          ))}
+        </motion.span>
+      </h1>
+      <div className='flex lg:flex-row sm:flex-col gap-4 justify-center'>
+        <a
+          href='#projects'
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className='relative w-[95%] sm:w-48 h-10 bg-gradient-to-r from-[#656565] to-[#06402B] shadow-[0_0_15px_rgba(255,255,255,0.4)] rounded-full'
+        >
+          <div className='absolute inset-[3px] bg-black rounded-full flex items-center justify-center gap-1 hover:invert transition duration-300'>
+            <i class='bx  bx-terminal'  ></i>  Software Developer
+
+          </div>
+        </a>
       </div>
     </div>
   );
