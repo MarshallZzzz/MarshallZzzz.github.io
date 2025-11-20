@@ -1,0 +1,21 @@
+# Dependency folders
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Tooling caches
+.vite/
+.tailwind/
+.eslintcache
+
+# System files
+.DS_Store
+
+# Env
+.env
+.env.local
+
+# Logs
+*.log
