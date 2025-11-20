@@ -66,6 +66,7 @@ export default function Education() {
         </motion.div>
 
         {/* BUBBLE ROW UNDER CARD */}
+          <h3 className="text-center text-2xl font-Galindo text-[#4df7c7] mb-2 mt-6">Click to see my leadership and achievements!</h3>
         <div className="relative w-full flex flex-col lg:flex-row justify-center gap-6 mt-12 pointer-events-auto">
           <Bubble
             imgURL='./SS.JPG'

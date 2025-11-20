@@ -101,7 +101,6 @@ export default function Skills() {
                 <li>• AWS ECS / ECR</li>
                 <li>• Docker Compose</li>
                 <li>• CI/CD (GitHub Actions)</li>
-                <li>• Deployment Pipelines</li>
                 <li>• Git Version Control</li>
               </ul>
             </motion.div>

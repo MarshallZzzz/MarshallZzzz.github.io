@@ -12,17 +12,16 @@ export default function About() {
         </h2>
 
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
-          I’m a software developer who loves building things that blend engineering,
-          creativity, and real-world impact. My background ranges from robotics and firmware
-          engineering to full-stack web development, music production, and leading my college
-          tennis club.
+          I’m a software engineer who loves building things that blends new technology,
+          creativity, and creates real-world impact. My focus is React/JavaScript full-stack web development. I'm
+          constantly curious about new technology to improve!
         </p>
 
         <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
           Whether I’m designing a budgeting app, solving a MicroMouse maze, or producing
-          something musical, I care about clean design, thoughtful problem-solving, and making
+          something musical, I care about clean designs, thoughtful problem-solving, and making
           projects feel polished and intentional. I’m focused on growing as a developer,
-          taking on meaningful projects, and continually learning how to build better systems.
+          building impactful work, and continually learning to build better systems.
         </p>
       </div>
     </section>

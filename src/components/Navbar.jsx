@@ -7,30 +7,47 @@ export default function Navbar() {
   const links = [
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
-    { label: "Education", href: "#education"},
+    { label: "Education", href: "#education" },
     { label: "Projects", href: "#projects" },
+    { label: "Games", href: "#games" },
+    { label: "Skills", href: "#skills" },
     { label: "Contact", href: "#contact" }
   ];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        
+
         {/* Logo */}
-        <a href="#hero" className="text-2xl font-Galindo text-[#4df7c7]">
+        <motion.button
+          onClick={() => {
+            document.querySelector("#hero")?.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+          }}
+          className="text-2xl font-Galindo text-[#4df7c7]"
+        >
           Marshall
-        </a>
+        </motion.button>
+
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 text-gray-300">
           {links.map((link) => (
-            <a
+            <motion.button
               key={link.href}
-              href={link.href}
-              className="hover:text-[#4df7c7] transition"
+
+              onClick={() => {
+                document.querySelector(`${link.href}`)?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
+              }}
+              className="hover:text-[#4df7c7] transition]"
             >
               {link.label}
-            </a>
+            </motion.button>
           ))}
         </div>
 
@@ -51,14 +68,19 @@ export default function Navbar() {
           className="md:hidden bg-black border-t border-gray-800 px-6 py-4 space-y-4"
         >
           {links.map((link) => (
-            <a
+            <motion.button
               key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-gray-300 hover:text-[#4df7c7] transition"
+
+              onClick={() => {
+                document.querySelector(`${link.href}`)?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start"
+                });
+              }}
+              className="block hover:text-[#4df7c7] transition]"
             >
               {link.label}
-            </a>
+            </motion.button>
           ))}
         </motion.div>
       )}

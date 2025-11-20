@@ -14,8 +14,8 @@ export default function Hero() {
         />
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-Galindo tracking-wide mb-6">
           {/* Hey! It&apos;s me! */}
-          WHAZZUUPP 
-          It&apos;s me! <span className="text-[#4df7c7]">Marshall </span>
+          HEY!
+          It&apos;s <span className="text-[#4df7c7]">Marshall </span>
         </h1>
 
         <motion.p
@@ -25,7 +25,7 @@ export default function Hero() {
           className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6"
         >
           I use technology to build real-world impact.
-          From full-stack apps and automation tools to robotics systems and music,
+          From full-stack apps to robotics systems and music,
           I love taking ideas and turning them into something real.
         </motion.p>
 
@@ -39,19 +39,29 @@ export default function Hero() {
         </motion.p>
 
         <div className="flex justify-center gap-4">
-          <a
-            href="#projects"
+          <motion.button
+            onClick={() => {
+              document.querySelector("#projects")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+            }}
             className="px-6 py-3 rounded-full bg-gradient-to-r from-[#06402B] to-[#4df7c7] text-black font-semibold shadow-lg hover:opacity-90 transition"
           >
             View My Work
-          </a>
-
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-full border border-[#4df7c7] text-[#4df7c7] font-semibold hover:bg-[#4df7c714] transition"
+          </motion.button>
+          <motion.button
+            onClick={() => {
+              document.querySelector("#contact")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+            }}
+            className="px-6 py-3 rounded-full border border-[#4df7c7] text-[#4df7c7] font-semibold cursor-pointer hover:bg-[#4df7c714] hover:scale-105 transition duration-300"
           >
             Contact Me
-          </a>
+          </motion.button>
+
         </div>
       </div>
     </section>
