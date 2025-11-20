@@ -2,71 +2,29 @@ import React from 'react'
 import Spline from '@splinetool/react-spline'
 import Skill from './skill'
 
-const About = () => {
-    return (
-        <div className='w-full flex flex-col
-    items-center justify-start px-16' id='About'>
-            <div className='w-full'>
-                <h1 className='text-7xl text-center underline'>About</h1>
-            </div>
-            <div className='grid lg:grid-cols-2 sm:grid-cols-2 gap-4'>
-                <div className='justify-items-center p-16'>
-                    <img src='profile.jpg' width={"200"} height={"200"} className='pb-4 rounded-full'/>
-                    <p className='text-bold text-3xl font-Galindo'>I’m committed to the pursuit of the greater good. With strong foundations in full stack development, I strive to create technology that enables focused productivity. My bread and butter is Java, but I’m also proficient in python and C. On my free time, I like to play tennis, exercise, and cook. </p>
-                </div>
-                <div className='flex flex-col items-center'>
-                     <div className="flex gap-3 md:gap-4">
-                        <Skill
-                            imgURL={"/skills/react_logo.png"}
-                            title={"React"}
-                        />
-                        <Skill
-                            imgURL={"/skills/nodejs.webp"}
-                            title={"Node JS"}
-                        />
-                    </div>
-                     <div className="flex gap-3 md:gap-4 -mt-[calc(var(--hex)/3)] ml-[calc(var(--hex)/2)]">
-                        <Skill
-                            imgURL={"/skills/JS.png"}
-                            title={"JavaScript"}
-                        />
-                        <Skill
-                            imgURL={"/skills/python.png"}
-                            title={"Python"}
-                        />
-                        <Skill
-                            imgURL={"/skills/mongo.png"}
-                            title={"MongoDB"}
-                        />
-                    </div>
-                    <div className="flex gap-3 md:gap-4 -mt-[calc(var(--hex)/3)]">
-                        <Skill
-                            imgURL={"/skills/java.png"}
-                            title={"Java"}
-                        />
-                        <Skill
-                            imgURL={"/skills/C.png"}
-                            title={"C"}
-                        />
-                        <Skill
-                            imgURL={"/skills/tailwindcss.png"}
-                            title={"TailwindCSS"}
-                        />
-                    </div>
-                    <div className="flex gap-3 md:gap-4">
-                        <Skill
-                            imgURL={"/skills/rust.png"}
-                            title={"React"}
-                        />
-                        {/* <Skill
-                            imgURL={"/skills/nodejs.webp"}
-                            title={"Node JS"}
-                        /> */}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
+export default function About() {
+  return (
+    <section id="about" className="w-full py-20 px-6 bg-black text-gray-200">
+      <div className="max-w-4xl mx-auto text-center">
 
-export default About
+        <h2 className="text-4xl sm:text-5xl font-Galindo mb-8 tracking-wide text-[#4df7c7]">
+          About Me
+        </h2>
+
+        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
+          I’m a software developer who loves building things that blend engineering,
+          creativity, and real-world impact. My background ranges from robotics and firmware
+          engineering to full-stack web development, music production, and leading my college
+          tennis club.
+        </p>
+
+        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+          Whether I’m designing a budgeting app, solving a MicroMouse maze, or producing
+          something musical, I care about clean design, thoughtful problem-solving, and making
+          projects feel polished and intentional. I’m focused on growing as a developer,
+          taking on meaningful projects, and continually learning how to build better systems.
+        </p>
+      </div>
+    </section>
+  );
+}
