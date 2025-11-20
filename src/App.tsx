@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import Games from './components/Games.js'
 import Projects from './components/Projects.js'
 import Contact from './components/Contact.js'
+import Education from './components/Education.js'
+import Skills from './components/Skills.js'
 import { Meteors } from './components/ui/shadcn-io/meteors/Meteors.js'
 
 function App() {
@@ -13,28 +15,18 @@ function App() {
   return (
     <div className='relative bg-[#000001] opacity-90 min-h-screen overflow-x-hidden text-white'>
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        <Meteors number={50} />
+        <Meteors number={30} />
       </div>
 
-
       <Navbar />
-
       <Hero />
       <About />
-      {/* Projects */}
-      <section id='projects' className=''>
-        {/* <div className='p-8'/> */}
-        <Projects />
-      </section>
-
-
-      <section id='gameDesign' className='pb-16'>
-        <Games />
-      </section>
-      <section id='Contact' className=''>
-        {/* <div className='p-8'/> */}
-        <Contact />
-      </section>
+      <Education/>
+      
+      <Projects />
+      <Games />
+      <Skills/>
+      <Contact />
 
     </div>
   )

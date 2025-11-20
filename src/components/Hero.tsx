@@ -3,19 +3,19 @@ import Bubble from "./bubble";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
-
-      {/* Floating Bubbles */}
-      <div className="absolute inset-0 pointer-events-none">
-        <FloatingBubble img="/Orlando.JPG" x="10%" y="20%" />
-        <FloatingBubble img="/MicroMouse.JPG" x="85%" y="35%" />
-        <FloatingBubble img="/SS.JPG" x="20%" y="70%" />
-      </div>
+    <section id='hero' className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
 
       {/* Main Content */}
-      <div className="relative z-10 text-center max-w-3xl">
+      <div className="relative flex flex-col z-10 items-center justify-center text-center max-w-3xl">
+        <img
+          src="./profile.jpg"
+          alt="Profile"
+          className="relative w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 object-cover rounded-full shadow-[0_0_20px_rgba(77,247,199,0.3)] mb-6"
+        />
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-Galindo tracking-wide mb-6">
-          Hey, I&apos;m <span className="text-[#4df7c7]">Marshall</span>
+          {/* Hey! It&apos;s me! */}
+          WHAZZUUPP 
+          It&apos;s me! <span className="text-[#4df7c7]">Marshall </span>
         </h1>
 
         <motion.p
@@ -24,8 +24,8 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6"
         >
-          I build things that blend engineering, creativity, and real-world impact.
-          From full-stack apps and automation tools to robotics systems and music production,
+          I use technology to build real-world impact.
+          From full-stack apps and automation tools to robotics systems and music,
           I love taking ideas and turning them into something real.
         </motion.p>
 
@@ -35,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-gray-400 mb-10 max-w-2xl mx-auto"
         >
-          Software developer • Robotics engineer • Music producer • Tennis leader
+          Software developer • Musician • Tennis Coach
         </motion.p>
 
         <div className="flex justify-center gap-4">
@@ -58,15 +58,3 @@ export default function Hero() {
   );
 }
 
-function FloatingBubble({ img, x, y }: { img: string; x: string; y: string }) {
-  return (
-    <motion.div
-      className="absolute opacity-80"
-      style={{ top: y, left: x, transform: "translate(-50%, -50%)" }}
-      animate={{ y: ["0px", "-20px", "0px"] }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    >
-      <Bubble imgURL={img} description="" />
-    </motion.div>
-  );
-}

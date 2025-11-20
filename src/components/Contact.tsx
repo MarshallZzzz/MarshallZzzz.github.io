@@ -27,10 +27,10 @@ export default function Contact() {
           <p>
             <span className="text-[#4df7c7] font-semibold">Email:</span>{" "}
             <a
-              href="mailto:marshalldz123@gmail.com"
+              href="mailto:marshall.zhang02@gmail.com"
               className="hover:text-[#4df7c7] transition"
             >
-              marshalldz123@gmail.com
+              marshall.zhang02@gmail.com
             </a>
           </p>
 
