@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Hero from './components/Hero.tsx'
-import CaseStudyCard from './components/CaseStudyCard.js'
 import About from './components/About'
 import Navbar from './components/Navbar'
 import Games from './components/Games.js'
