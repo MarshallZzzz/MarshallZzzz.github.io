@@ -1,17 +1,31 @@
 import { motion } from "framer-motion";
-import Bubble from "./bubble";
+import { useEffect, use } from "react";
+import { IKImage, IKContext } from 'imagekitio-react';
 
-export default function Hero() {
+export default function Hero({ profileRef }) {
   return (
     <section id='hero' className="relative min-h-screen flex items-center justify-center overflow-hidden px-6">
 
       {/* Main Content */}
       <div className="relative flex flex-col z-10 items-center justify-center text-center max-w-3xl">
-        <img
-          src="./profile.jpg"
+        <IKImage
+          urlEndpoint="https://ik.imagekit.io/aegwbjd5j/public" // Include this to be safe
+          path="profilepic.webp"                       // NO "/public/" and NO leading slash
+          ref={profileRef}
+          transformation={[{ height: "300", width: "300" }]}
           alt="Profile"
-          className="relative w-32 sm:w-40 lg:w-48 h-32 sm:h-40 lg:h-48 object-cover rounded-full shadow-[0_0_20px_rgba(77,247,199,0.3)] mb-6"
+          className="
+    relative
+    w-32 sm:w-40 lg:w-48
+    h-32 sm:h-40 lg:h-48
+    object-cover
+    rounded-full
+    bg-[#caff00]
+    shadow-[0_0_50px_rgba(77,247,199,0.9)]
+    mb-6
+  "
         />
+
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-Galindo tracking-wide mb-6">
           {/* Hey! It&apos;s me! */}
           HEY!
@@ -27,15 +41,6 @@ export default function Hero() {
           I use technology to build real-world impact.
           From full-stack apps to robotics systems and music,
           I love taking ideas and turning them into something real.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-gray-400 mb-10 max-w-2xl mx-auto"
-        >
-          Software developer • Musician • Tennis Coach
         </motion.p>
 
         <div className="flex justify-center gap-4">

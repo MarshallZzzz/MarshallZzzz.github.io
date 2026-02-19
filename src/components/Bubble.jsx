@@ -1,3 +1,4 @@
+import { img } from "framer-motion/client";
 import React, { useState } from "react";
 
 const Bubble = ({ imgURL, description }) => {
@@ -19,8 +20,15 @@ const Bubble = ({ imgURL, description }) => {
           `}
         >
           {/* FRONT */}
+          {/* <IKImage
+            urlEndpoint="https://ik.imagekit.io/aegwbjd5j/public" // Include this to be safe
+            path={imgURL}                       // NO "/public/" and NO leading slash
+            // src={`https://ik.imagekit.io/aegwbjd5j/public/${imgURL}`} // Full URL to the image
+            transformation={[{ height: "300", width: "300" }]}
+            className="absolute inset-0 w-full h-full object-cover rounded-full shadow-xl [backface-visibility:hidden] transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_25px_rgba(77,247,199,0.5)]"
+          /> */}
           <img
-            src={imgURL}
+            src={`https://ik.imagekit.io/aegwbjd5j/public/${imgURL}`}
             className="absolute inset-0 w-full h-full object-cover rounded-full shadow-xl [backface-visibility:hidden] transition-transform duration-300 hover:scale-110 hover:shadow-[0_0_25px_rgba(77,247,199,0.5)]"
           />
 

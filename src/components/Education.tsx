@@ -69,23 +69,23 @@ export default function Education() {
           <h3 className="text-center text-2xl font-Galindo text-[#4df7c7] mb-2 mt-6">Click to see my leadership and achievements!</h3>
         <div className="relative w-full flex flex-col lg:flex-row justify-center gap-6 mt-12 pointer-events-auto">
           <Bubble
-            imgURL='./SS.JPG'
+            imgURL='SS.JPG'
             description="Quintet Ensemble First Chair"
           />
           <Bubble className="w-8 h-8 animate-float-medium opacity-40" 
-            imgURL='./seniorRecital.png'
+            imgURL='seniorRecital.png'
             description="Outstanding Instrumentalist Award & Senior Recital"
           />
           <Bubble className="w-8 h-8 animate-float-medium opacity-40" 
-            imgURL='./Orlando.JPG'
+            imgURL='Orlando.JPG'
             description="Tennis Club President"
           />
           <Bubble className="w-8 h-8 animate-float-fast opacity-40" 
-            imgURL='./MicroMouse.JPG'
+            imgURL='MicroMouse.JPG'
             description="Outstanding Capstone Award"
           />
           <Bubble className="w-8 h-8 animate-float-slow opacity-40" 
-            imgURL='./lionDance.JPG'
+            imgURL='lionDance.jpg'
             description="Lion Dance Head"
           />
         </div>

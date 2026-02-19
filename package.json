@@ -12,15 +12,18 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@splinetool/react-spline": "^4.1.0",
     "@tailwindcss/vite": "^4.1.11",
     "boxicons": "^2.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
+    "imagekitio-react": "^4.3.0",
     "lucide-react": "^0.554.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-hot-toast": "^2.6.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.11",
     "three": "^0.179.1"

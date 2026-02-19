@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { IKVideo, IKImage } from 'imagekitio-react';
 
 interface CaseStudyProps {
   title: string;
@@ -52,7 +53,7 @@ export default function CaseStudyCard({
         <div className="flex items-center justify-center">
           {mediaType === "video" && (
             <motion.video
-              src={media}
+              src={`https://ik.imagekit.io/aegwbjd5j/public/${media}`}
               controls
               className="rounded-xl shadow-lg w-full h-auto object-cover"
               whileHover={{ scale: 1.03 }}
@@ -62,7 +63,7 @@ export default function CaseStudyCard({
 
           {mediaType === "image" && (
             <motion.img
-              src={media}
+              src={`https://ik.imagekit.io/aegwbjd5j/public/${media}`}
               alt={title}
               className="rounded-xl shadow-lg w-full h-auto object-cover"
               whileHover={{ scale: 1.03 }}
@@ -72,7 +73,7 @@ export default function CaseStudyCard({
 
           {mediaType === "youtube" && (
             <motion.iframe
-              src={media}
+              src={`https://ik.imagekit.io/aegwbjd5j/public/${media}`}
               className="rounded-xl shadow-lg w-full aspect-video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
