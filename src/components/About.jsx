@@ -1,6 +1,5 @@
 import React from 'react'
 import Spline from '@splinetool/react-spline'
-import Skill from './skill'
 import { motion } from "framer-motion";
 
 export default function About() {
