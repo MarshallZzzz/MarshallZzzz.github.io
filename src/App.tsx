@@ -1,8 +1,8 @@
 import { useRef } from "react"
 import IntroGate from './IntroGate.js'
 import Hero from './components/Hero.tsx'
-import Navbar from './components/Navbar'
-import About from './components/About'
+import Navbar from './components/Navbar.jsx'
+import About from './components/About.jsx'
 import Education from './components/Education.js'
 import Projects from './components/Projects.js'
 import Games from './components/Games.js'
